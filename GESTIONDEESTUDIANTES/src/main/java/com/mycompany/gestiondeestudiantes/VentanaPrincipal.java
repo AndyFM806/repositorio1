@@ -63,12 +63,22 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btnEditar.setBackground(new java.awt.Color(238, 235, 235));
         btnEditar.setFont(new java.awt.Font("Segoe UI Historic", 0, 24)); // NOI18N
         btnEditar.setText("Editar Alumno");
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarActionPerformed(evt);
+            }
+        });
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/gestiondeestudiantes/editar.png"))); // NOI18N
 
         btnEliminar.setBackground(new java.awt.Color(238, 235, 235));
         btnEliminar.setFont(new java.awt.Font("Segoe UI Historic", 0, 24)); // NOI18N
         btnEliminar.setText("Eliminar Alumno");
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/gestiondeestudiantes/eliminar.png"))); // NOI18N
 
@@ -162,12 +172,20 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarActionPerformed
-        // TODO add your handling code here:
+        new Mostrar().setVisible(true);
     }//GEN-LAST:event_btnMostrarActionPerformed
 
     private void btnInscribirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInscribirActionPerformed
         new Inscripcion().setVisible(true);
     }//GEN-LAST:event_btnInscribirActionPerformed
+
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+        new Edición().setVisible(true);
+    }//GEN-LAST:event_btnEditarActionPerformed
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        new Eliminar().setVisible(true);
+    }//GEN-LAST:event_btnEliminarActionPerformed
 
     /**
      * @param args the command line arguments

@@ -9,9 +9,9 @@ package Entidades;
  * @author PC
  */
 public class SistemaGestion {
-    private static final int CAPACIDAD_MAXIMA = 100; 
-    private static final Estudiante[] Estudiantes = new Estudiante[CAPACIDAD_MAXIMA];
-    private static int contador = 0;
+    public static final int CAPACIDAD_MAXIMA = 100; 
+    public static final Estudiante[] Estudiantes = new Estudiante[CAPACIDAD_MAXIMA];
+    public static int contador = 0;
 
     public static boolean agregarAlumno(Estudiante alumno) {
         if (contador < CAPACIDAD_MAXIMA) {
@@ -35,12 +35,12 @@ public class SistemaGestion {
     }
 
     public static Estudiante buscarAlumnoPorDni(String dni) {
-        for (int i = 0; i < contador; i++) {
-            if (Estudiantes[i].getDni().equals(dni)) {
-                return Estudiantes[i];
+        for (int i = 0; i < contador; i++) { 
+            if (Estudiantes[i] != null && Estudiantes[i].getDni().equals(dni)) {
+                return Estudiantes[i]; 
             }
         }
-        return null;
+        return null; 
     }
 
     public static boolean eliminarAlumno(String dni) {
@@ -63,4 +63,5 @@ public class SistemaGestion {
         }
         return resultado;
     }
+    
 }

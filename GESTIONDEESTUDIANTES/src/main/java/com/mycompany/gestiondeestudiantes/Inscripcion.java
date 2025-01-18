@@ -19,6 +19,7 @@ public class Inscripcion extends javax.swing.JFrame {
     public Inscripcion() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -30,6 +31,7 @@ public class Inscripcion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel8 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -45,6 +47,8 @@ public class Inscripcion extends javax.swing.JFrame {
         btnRegistrar = new javax.swing.JButton();
         btnVolver = new javax.swing.JButton();
         cbAño = new javax.swing.JComboBox<>();
+
+        jLabel8.setText("jLabel8");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -225,6 +229,7 @@ public class Inscripcion extends javax.swing.JFrame {
                 Estudiante alumno = new Estudiante(nombre, apellido, dni, edad, añoEstudio);
             if (SistemaGestion.agregarAlumno(alumno)) {
                 JOptionPane.showMessageDialog(this, "Alumno registrado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                limpiarCampos();
             } else {
                 JOptionPane.showMessageDialog(this, "No se pudo registrar al alumno. Capacidad máxima alcanzada.", "Error", JOptionPane.ERROR_MESSAGE);
             }} else {
@@ -238,7 +243,12 @@ public class Inscripcion extends javax.swing.JFrame {
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombreActionPerformed
-
+    private void limpiarCampos() {
+        txtDni.setText("");
+        txtNombre.setText("");
+        txtApellido.setText("");
+        txtEdad.setText("");  
+    }
     /**
      * @param args the command line arguments
      */
@@ -286,6 +296,7 @@ public class Inscripcion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtDni;

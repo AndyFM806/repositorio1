@@ -19,6 +19,7 @@ public class Edición extends javax.swing.JFrame {
     public Edición() {
         initComponents();
         this.setLocationRelativeTo(null);
+        btnGuardar.setEnabled(false);
     }
 
     /**
@@ -211,7 +212,7 @@ public class Edición extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cbAño, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnVolver1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap(28, Short.MAX_VALUE))
@@ -242,6 +243,7 @@ public class Edición extends javax.swing.JFrame {
                 alumno.setAñoEstudio(Integer.parseInt((String) cbAño.getSelectedItem()));
 
                 JOptionPane.showMessageDialog(this, "Alumno actualizado con éxito.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                limpiarCampos();
             }
     }//GEN-LAST:event_btnGuardarActionPerformed
    
@@ -269,7 +271,12 @@ public class Edición extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Alumno no encontrado.", "Error", JOptionPane.ERROR_MESSAGE);
             }
     }//GEN-LAST:event_btnBuscarActionPerformed
-
+    private void limpiarCampos() {
+        txtDni.setText("");
+        txtNombre.setText("");
+        txtApellido.setText("");
+        txtEdad.setText("");  
+    }
     /**
      * @param args the command line arguments
      */
