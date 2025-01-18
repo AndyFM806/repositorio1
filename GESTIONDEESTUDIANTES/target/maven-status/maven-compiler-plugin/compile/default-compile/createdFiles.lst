@@ -1,5 +1,6 @@
 com\mycompany\gestiondeestudiantes\Eliminar$4.class
 com\mycompany\gestiondeestudiantes\Mostrar$3.class
+com\mycompany\gestiondeestudiantes\VentanaPrincipal$6.class
 Entidades\SistemaGestion.class
 com\mycompany\gestiondeestudiantes\VentanaPrincipal$1.class
 Entidades\Estudiante.class
@@ -8,7 +9,6 @@ com\mycompany\gestiondeestudiantes\Mostrar$1.class
 com\mycompany\gestiondeestudiantes\Mostrar.class
 com\mycompany\gestiondeestudiantes\Mostrar$4.class
 com\mycompany\gestiondeestudiantes\VentanaPrincipal$3.class
-com\mycompany\gestiondeestudiantes\GESTIONDEESTUDIANTES.class
 com\mycompany\gestiondeestudiantes\Eliminar$3.class
 com\mycompany\gestiondeestudiantes\Mostrar$2.class
 com\mycompany\gestiondeestudiantes\VentanaPrincipal$5.class
