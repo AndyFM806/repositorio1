@@ -6,7 +6,7 @@ package Entidades;
 
 /**
  *
- * @author PC
+ * @author ANDY FERNANDEZ
  */
 public class Estudiante {
     private String nombre;

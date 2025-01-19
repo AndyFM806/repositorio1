@@ -272,7 +272,7 @@ public class Edición extends javax.swing.JFrame {
             }
     }//GEN-LAST:event_btnBuscarActionPerformed
     private void limpiarCampos() {
-        txtDni.setText("");
+        txtDni.setText(" ");
         txtNombre.setText("");
         txtApellido.setText("");
         txtEdad.setText("");  
